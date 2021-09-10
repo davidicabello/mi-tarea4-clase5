@@ -53,13 +53,13 @@ document.querySelector('.grande').innerText = findBiggerNumber(numbersArray);
 //Mas Repite
 
 function findMoreFrequentNumber() {
-    let moreFrequentNumber = numbersArray;
+    let moreFrequentNumber =0;
     for (let i = 0; i < numbersArray.length; i++) {
         for (let j = 0; j < numbersArray.length; j++) {
             if (i !== j) {
                 if (numbersArray[i] === numbersArray[j]) {
 
-                    moreFrequentNumber = numbersArray[j];
+                    moreFrequentNumber = numbersArray[i];
                 }
             }
 
