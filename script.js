@@ -35,35 +35,39 @@ function findMinorNumber() {
     }
     return minorNumber;
 }
-document.querySelector('.pequeño').innerText= findMinorNumber(numbersArray);
+document.querySelector('.pequeño').innerText = findMinorNumber(numbersArray);
 
 //Mayor
 
-function findBiggerNumber(){
+function findBiggerNumber() {
     let biggerNumber = numbersArray[0];
-    for(let i = 0; i < numbersArray.length; i++){
-        if(numbersArray[i] > biggerNumber){
+    for (let i = 0; i < numbersArray.length; i++) {
+        if (numbersArray[i] > biggerNumber) {
             biggerNumber = numbersArray[i];
         }
     }
-return biggerNumber;
+    return biggerNumber;
 }
 document.querySelector('.grande').innerText = findBiggerNumber(numbersArray);
 
 //Mas Repite
 
-function findeMoreFrequentNumber(){
-    let moreFrequentNumber = 0;
-    
-    for(let i = 0; i < numbersArray.length; i++){
-        let counter = 0;
-        for(let j = 0; j < numbersArray.length; j++){
-            if(numbersArray[i] === numbersArray[j]){
-                counter++
-                moreFrequentNumber = numbersArray[i];
+function findMoreFrequentNumber() {
+    let moreFrequentNumber = numbersArray;
+    for (let i = 0; i < numbersArray.length; i++) {
+        for (let j = 0; j < numbersArray.length; j++) {
+            if (i !== j) {
+                if (numbersArray[i] === numbersArray[j]) {
+
+                    moreFrequentNumber = numbersArray[j];
+                }
             }
+
         }
     }
-return moreFrequentNumber;
+    return moreFrequentNumber;
 }
-document.querySelector('.frecuente').innerText = findeMoreFrequentNumber(numbersArray)
+document.querySelector('.frecuente').innerText = findMoreFrequentNumber()
+
+
+
