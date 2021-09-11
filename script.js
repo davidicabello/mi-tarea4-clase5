@@ -52,13 +52,16 @@ document.querySelector('.grande').innerText = findBiggerNumber(numbersArray);
 
 //Mas Repite
 
-function findMoreFrequentNumber() {
-    let moreFrequentNumber =0;
+function findMostFrequentNumber() {
+    let moreFrequentNumber;
+
     for (let i = 0; i < numbersArray.length; i++) {
+        let counter = 0;
         for (let j = 0; j < numbersArray.length; j++) {
+
             if (i !== j) {
                 if (numbersArray[i] === numbersArray[j]) {
-
+                    counter + 1
                     moreFrequentNumber = numbersArray[i];
                 }
             }
@@ -67,7 +70,7 @@ function findMoreFrequentNumber() {
     }
     return moreFrequentNumber;
 }
-document.querySelector('.frecuente').innerText = findMoreFrequentNumber()
+document.querySelector('.frecuente').innerText = findMostFrequentNumber()
 
 
 
