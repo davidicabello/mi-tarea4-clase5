@@ -52,25 +52,24 @@ document.querySelector('.grande').innerText = findBiggerNumber(numbersArray);
 
 //Mas Repite
 
-function findMostFrequentNumber() {
-    let moreFrequentNumber;
-
-    for (let i = 0; i < numbersArray.length; i++) {
-        let counter = 0;
-        for (let j = 0; j < numbersArray.length; j++) {
-
-            if (i !== j) {
-                if (numbersArray[i] === numbersArray[j]) {
-                    counter + 1
-                    moreFrequentNumber = numbersArray[i];
-                }
+function findMostFrequentNumber(arr, n) {
+    n = arr.length;
+    let biggestFrequency = 0;
+    let mostFrequentNumber = 0;
+    for (let i = 0; i < n; i++) {
+        let count = 0;
+        for (let j = 0; j < n; j++) {
+            if (arr[i] === arr[j]) {
+                count++;
             }
-
+        }
+        if (count > biggestFrequency) {
+            mostFrequentNumber = arr[i];
+            biggestFrequency = count;
         }
     }
-    return moreFrequentNumber;
+    return mostFrequentNumber
 }
-document.querySelector('.frecuente').innerText = findMostFrequentNumber()
-
+document.querySelector('.frecuente').innerText = findMostFrequentNumber(numbersArray)
 
 
