@@ -52,8 +52,8 @@ document.querySelector('.grande').innerText = findBiggerNumber(numbersArray);
 
 //Mas Repite
 
-function findMostFrequentNumber(arr, n) {
-    n = arr.length;
+function findMostFrequentNumber(arr) {
+    let n = arr.length;
     let biggestFrequency = 0;
     let mostFrequentNumber = 0;
     for (let i = 0; i < n; i++) {
